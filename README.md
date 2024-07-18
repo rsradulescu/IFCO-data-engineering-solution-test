@@ -69,10 +69,10 @@ Provide a list of the distinct sales owners and their respective commission earn
 
 Provide a DataFrame (`df_3`) containing the following columns:
 
-| Column           | Description                                                                                              |
-|------------------|----------------------------------------------------------------------------------------------------------|
-| company_id       | The `company_id` field must contain the unique identifier of the company.                                 |
-| company_name     | The `company_name` field must contain the name of the company.                                            |
+| Column           | Description                                                                                                                                                                                                                                       |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| company_id       | The `company_id` field must contain the unique identifier of the company.                                                                                                                                                                         |
+| company_name     | The `company_name` field must contain the name of the company.                                                                                                                                                                                    |
 | list_salesowners | The `list_salesowners` field should contain a unique and comma-separated list of salespeople who have participated in at least one order of the company. Please ensure that the list is sorted in ascending alphabetical order of the first name. |
 
 **Hint:** Consider the possibility of duplicate companies stored under multiple IDs in the database. Take this into account while devising a solution to this exercise.
@@ -83,6 +83,5 @@ Provide a DataFrame (`df_3`) containing the following columns:
 
 1. **Deliverables**: Ensure your code is well-commented and structured. Provide Jupyter notebooks or Python/PySpark scripts that can be executed to reproduce your results. Include unit tests for each test.
 2. **Evaluation**: Your solution will be evaluated based on accuracy, efficiency, code clarity, and the comprehensiveness of your unit tests.
-3. **Deadline**: Complete this assessment within [insert deadline here].
 
 Good luck!
