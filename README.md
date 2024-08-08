@@ -81,7 +81,11 @@ Provide a DataFrame (`df_3`) containing the following columns:
 
 ## Additional Instructions
 
-1. **Deliverables**: Ensure your code is well-commented and structured. Provide Jupyter notebooks or Python/PySpark scripts that can be executed to reproduce your results. Include unit tests for each test.
-2. **Evaluation**: Your solution will be evaluated based on accuracy, efficiency, code clarity, and the comprehensiveness of your unit tests.
+1. **Deliverables**: Ensure your code is well-commented and structured. Provide a complete execution environment as a deliverable. This should include:
+   - All the source code and scripts necessary to reproduce the results.
+   - Clear instructions for setting up and running the environment, including any necessary configurations.
+   - A Dockerfile, if applicable, for containerized execution.
+   - A zipped archive of the project directory or a link to a Git repository containing all the above elements.
+2. **Evaluation**: Your solution will be evaluated based on accuracy, efficiency, code clarity, the comprehensiveness of your unit tests, and the completeness of the provided execution environment.
 
 Good luck!
