@@ -2,7 +2,7 @@
 
 To start we can create a new folder in our local machine, to clone the source repository, and opened in VSCode.
 <p align="center">
-  <img src=".images/github_clone.png" alt="github clone terminal">
+  <img src=".images/github_clone.png" alt="github clone terminal" width="50%">
 </p>
 
 In VSCode, open terminal and:
@@ -45,7 +45,7 @@ NOTE: I decided to create one different python file for each requirement in the 
 - To test this code I added the condition "if __name__ == __main__"
 
 <p align="center">
-  <img src=".images/1-get_distribution.png" alt="execute distribution python code">
+  <img src=".images/1-get_distribution.png" alt="execute distribution python code" width="50%">
 </p>
 
 
