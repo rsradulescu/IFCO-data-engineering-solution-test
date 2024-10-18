@@ -55,6 +55,17 @@ NOTE: I decided to create one different python file for each requirement in the 
   <img src=".images/1-get_distribution.png" alt="execute distribution python code" width="50%">
 </p>
 
+- For the unit test I create a new python file in test folder called ut1_order_per_type.py.
+- Here I use unittest library (integrated in Python), to test the get_distribution function.
+- The idea is to compare a new simple test df with the columns [company_name, create_type, order_id] and an expected df.
+- After applied the get_distribution function in the test df, the result should be the same that expected df.
+
+<p align="center">
+  <img src=".images/1-unittest_get_distribution.png" alt="execute unit test for get_distribution" width="50%">
+</p>
+
+
+
 ### Test 2: DataFrame of Orders with Full Name of the Contact
 - Import first file we created before to use the load function.
 - Create a function to receive a json object with contact data. Extract the name and subname and return the concatenation.
