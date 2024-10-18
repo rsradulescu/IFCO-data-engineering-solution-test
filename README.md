@@ -65,7 +65,6 @@ NOTE: I decided to create one different python file for each requirement in the 
 </p>
 
 
-
 ### Test 2: DataFrame of Orders with Full Name of the Contact
 - Import first file we created before to use the load function.
 - Create a function to receive a json object with contact data. Extract the name and subname and return the concatenation.
@@ -77,6 +76,40 @@ NOTE: I decided to create one different python file for each requirement in the 
   <img src=".images/2-get_fullname.png" alt="get order id and full name python code" width="50%">
 </p>
 
+- For the unit test I create the ut2_orders_full_name python file.
+- I include several test cases for diverse scenarios:
+- - Have boths name and surname: ideal case, show both.
+- - Have only name or only surname: show 'John Doe' as placeholder if some of these are not abailable.
+- - Have empty data: show placeholder 'John Doe'.
+- - Have extra double quotes: Remove extra quotes and consider to show name and surname.
+
+<p align="center">
+  <img src=".images/2-unittest_get_fullname.png" alt="execute unit test for get_distributionget_contact_full_name" width="50%">
+</p>
+
+### Test 3: DataFrame of Orders with Contact Address (city+cp)
+- Import first file we created before to use the load function.
+- Create a function to receive a json object with contact data. Extract the city and cp and return the concatenation.
+- If some of these values are missing, replace with "Unknown" the city and "UNK00" the postal code (or both if contact_data is empty). 
+- Apply the previous function to every row in the df.
+- To test this code I added the condition "if __name__ == __main__"
+
+<p align="center">
+  <img src=".images/3-get_address.png" alt="get order id and address python code" width="50%">
+</p>
+
+- For the unit test I create the ut3_orders_contact_address python file.
+- I include several test cases for diverse scenarios:
+- - Have both city and cp
+- - Have only city or only cp
+- - Have empty city and cp: show placeholder for city and cp
+- - Have None in contact_data
+
+<p align="center">
+  <img src=".images/3-unittest_get_address.png" alt="execute unit test for get_contact_address" width="50%">
+</p>
+
+
 
 
 
@@ -84,4 +117,5 @@ NOTE: I decided to create one different python file for each requirement in the 
 ---------
 Add quality scripts
 - some of the company names seems same, I consider to get similar name as the same company, with a new column name.
+- all the contact_data should have [] to be a list
 - modeling

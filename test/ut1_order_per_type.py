@@ -34,7 +34,7 @@ class TestDistribution(unittest.TestCase):
         result_df = result_df.sort_values(by=['company_name', 'crate_type']).reset_index(drop=True)
         expected_df = expected_df.sort_values(by=['company_name', 'crate_type']).reset_index(drop=True)
         
-        # Assert equal
+        # Assert equal df
         pd.testing.assert_frame_equal(result_df, expected_df)
 
 if __name__ == '__main__':

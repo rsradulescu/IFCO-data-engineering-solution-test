@@ -1,5 +1,16 @@
-from t1_orders_per_type import load_orders
 import json
+#Conditional Imports
+try:
+    # Relative import
+    from src.t1_orders_per_type import load_orders
+except ImportError:
+    # Direct execution
+    from t1_orders_per_type import load_orders
+
+'''
+Test 2: DataFrame of Orders with Full Name of the Contact
+Provide a DataFrame (df_1) containing the following columns: order_id, contact_full_name
+'''
 
 # Contact_full_name = concat (name + surname)
 def get_contact_full_name(contact_data):
