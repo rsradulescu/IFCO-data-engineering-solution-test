@@ -110,11 +110,30 @@ NOTE: I decided to create one different python file for each requirement in the 
 </p>
 
 
+### Test 4: Calculation of Sales Team Commissions
+- Create a new load_invoices function to load the invoices json file in a df.
+- Inside this load_invoices function calculate the net value from the gross and vat. 
+- Create a get_commission function that receive orders_df and invoices_df, and merge them. 
+- Set the commission rates, enumerate the salesowners and assign a commission rate based in the position list.
+- Convert commission from cents to euros, and sort the list in order of descending performance.
+
+<p align="center">
+  <img src=".images/4-get_commissions.png" alt="result from 4-get_commissions" width="50%">
+</p>
+
+- The unit test verify the correctness of the commission calculations and sorting order.
+
+<p align="center">
+  <img src=".images/4-unittest_get_commissions.png" alt="result from 4-get_commissions" width="50%">
+</p>
+
+
 
 
 
 
 ---------
+- Ensure good translate
 Add quality scripts
 - some of the company names seems same, I consider to get similar name as the same company, with a new column name.
 - all the contact_data should have [] to be a list
