@@ -1,6 +1,6 @@
 ## 1 - Preparing the environment
 
-To start we can create a new folder in our local machine, to clone the source repository, and opened in VSCode.
+To start, I create a new folder on the local machine, to clone the source repository and open it in VSCode.
 <p align="center">
   <img src=".images/github_clone.png" alt="github clone terminal" width="50%">
 </p>
@@ -12,28 +12,24 @@ $ git remote remove origin
 $ git remote add origin https://github.com/rsradulescu/IFCO-data-engineering-solution-test.git        
 ```
 
-In VSCode, open terminal and:
-- Create a new README file and updated.
-- Configuring the Python virtual environment, with the latest stable python version (V3.12 at October 16)
+In VSCode, open the terminal and:
+- Created a new README file and updated it.
+- I set up the Python virtual environment, with the latest stable version of Python (V3.12 as of October 16).
 
 ```
 $ python3 --version  
 $ python3.12 -m venv venv 
 ```
 
-- Now, a new folder was created, with the venv files, we need to activate it.
-
+- Now a new folder has been created, with the venv files, we must activate it.
 ```
 $ source venv/bin/activate   
 ```
-- Create a requirement.txt file to list all the necesary Python libraries, and installed at once (if you don't know it at the beggining, you can just installing locally and later generate the requirement file with the command: $pip freeze > requirements.txt ). 
-
+- Create a requirement.txt file to list all the required Python libraries, and install them at once (if you don't know at first, you can install it locally and then generate the requirement.txt file with the command: $pip freeze > requirements.txt ).
 ```
 $ pip install -r requirements.txt
 ```
-
-- Create the folders needed to organice the process: src folder for the python code and test folder for the test python code.
-
+- Create the necessary folders to organize the process: /src folder for the Python code and /test folder for the test Python code.
 ```
 $ mkdir test
 $ mkdir scr
@@ -41,14 +37,14 @@ $ mkdir scr
 
 ## 2 - Developing the solution
 
-NOTE: I decided to create one different python file for each requirement in the challenge. 
+NOTE: I decided to create a different Python file for each challenge task. In practice, I prefer to put all the related functions together in one model file and test them in another location.
 
 ### Test 1: Distribution of Crate Type per Company
 
 - Create the t1_orders_per_type.py file.
 - Define 2 main functions: 
-- - The first one to load the df with the content of orders.csv
-- - The second one to get the distribution number group by company name and box type.
+ - The first to load the df with the contents of orders.csv 
+ - The second to get the group of distribution numbers by company name and crate type.
 - To test this code I added the condition "if __name__ == __main__"
 
 <p align="center">
@@ -160,15 +156,16 @@ Some details in the worflow:
 - After the changes are pushed, we can see the successful execution in Github Actions.
 
 <p align="center">
-  <img src=".images/extra-cicd.png" alt="Run unit test successfull" width="50%">
+  <img src=".images/extra-cicd.png" alt="Run unit test successfull" width="70%">
 </p>
 
+## Data modeling
+Data modeling is essential in the data engineering process to organize raw data into a structured format that enables efficient querying and analysis. 
+For this solution I suggest to use a dimensional model, because it simplifies complex relationships by separating facts (invoices) from dimensions (orders, companies, contacts, salesowners). It improves query performance by minimizing joins and supports scalability, making it suitable for business intelligence and reporting. 
 
+<p align="center">
+  <img src=".images/der_normalization-starschema.png" alt="Star Schema data modeling" width="70%">
+</p>
 
-
-
-- Ensure good translate
-Add quality scripts
-- some of the company names seems same, I consider to get similar name as the same company, with a new column name.
-- all the contact_data should have [] to be a list
-- modeling
+DBT (Data Build Tool) is a great solution for applying data modeling because it allows data engineers to transform raw data into clean, analytics tables using SQL. 
+In order to not delay the delivery of the work, I omitted the development in DBT here.
