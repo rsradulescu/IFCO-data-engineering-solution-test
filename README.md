@@ -127,12 +127,30 @@ NOTE: I decided to create one different python file for each requirement in the 
   <img src=".images/4-unittest_get_commissions.png" alt="result from 4-get_commissions" width="50%">
 </p>
 
+### Test 5: DataFrame of Companies with Sales Owners
+- Load the df from orders csv file and create a new function to get the company name and list owners.
+- Within the function, first I create a new column to normalice the company names, considering duplicate companies are stored under multiple IDs due to slight variations in the company name. To identify the same companies I consider lowercase names and remove non-alphanumeric characters. 
+- Drop the duplicated companies, and merged the ownerlist and consider the first name and company_id to identify the company. 
+- Return as a df_3
 
+<p align="center">
+  <img src=".images/5-get_owners_company.png" alt="result from 5-get_owners_company" width="50%">
+</p>
 
+- For the test, first I create a sample df similar like the source orders csv file. 
+- I create 2 different scenarios to test:
+- - test_create_company_salesowners_df: Check is correctly merges duplicate companies and collects sales owners. Compares the resulting DataFrame to the expected DataFrame.
+- - test_duplicate_companies_handling: Check if duplicate companies are correctly identified and merged.
 
+<p align="center">
+  <img src=".images/5-unittest-get_owners_company.png" alt="result from uniitest 5-get_owners_company" width="50%">
+</p>
 
 
 ---------
+#  Extra
+## CICD
+
 - Ensure good translate
 Add quality scripts
 - some of the company names seems same, I consider to get similar name as the same company, with a new column name.
