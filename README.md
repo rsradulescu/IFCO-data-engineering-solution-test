@@ -151,6 +151,22 @@ NOTE: I decided to create one different python file for each requirement in the 
 #  Extra
 ## CICD
 
+I added a CI/CD pipeline using GitHub Actions, in the GitHub repository, that will automatically run unit tests whenever code is pushed to the main branch. This helps maintain code quality and catches issues early in the development.
+You can find the yaml workflow file in the folder: .github/workflows
+Some details in the worflow:
+- Matrix strategy is set up to ensure that the test can run successfully on at least two versions of Python: 3.11 and 3.12.
+- We install all the necessary libraries, which are in requirements.py
+- On the last line use "test discover" to run all the tests in the /test directory, which has the pattern in the name "ut*.py" (starts with 'ut' and ends with '.py')
+- After the changes are pushed, we can see the successful execution in Github Actions.
+
+<p align="center">
+  <img src=".images/extra-cicd.png" alt="Run unit test successfull" width="50%">
+</p>
+
+
+
+
+
 - Ensure good translate
 Add quality scripts
 - some of the company names seems same, I consider to get similar name as the same company, with a new column name.
